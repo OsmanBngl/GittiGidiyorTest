@@ -1,7 +1,6 @@
 package Page;
 
 import Base.BasePage;
-import Utils.Constants;
 import org.apache.log4j.Logger;
 import org.junit.Assert;
 import org.openqa.selenium.By;

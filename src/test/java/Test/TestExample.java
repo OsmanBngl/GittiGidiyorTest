@@ -13,9 +13,8 @@ public class TestExample extends BaseTest {
     ProductDetailPage productDetailPage;
     BasketPage basketPage;
 
-
     @Test
-    public void testiniumCase() throws InterruptedException {
+    public void testiniumCase()  {
 
         loginPage = new LoginPage(driver);
         homePage = new HomePage(driver);
@@ -23,54 +22,54 @@ public class TestExample extends BaseTest {
         productDetailPage=new ProductDetailPage(driver);
         basketPage=new BasketPage(driver);
 
-       // homePage.goToLogin();
-       // loginPage.login(Constants.email, Constants.password);
-       // Thread.sleep(4000);
-       // loginPage.loginControl(Constants.expectedUsername);
+        homePage.goToLogin();
+        loginPage.login(Constants.email, Constants.password);
+        homePage.wait(4);
+        loginPage.loginControl(Constants.expectedUsername);
 
         homePage.search("Bilgisayar");
-        Thread.sleep(4000);
+        homePage.wait(4);
 
         homePage.searchControl(Constants.expectedSearchText);
 
-        Thread.sleep(1000);
-        Thread.sleep(1000);
+        productListPage.wait(1);
+        productListPage.wait(1);
         productListPage.secondPage();
-        Thread.sleep(1000);
+        productListPage.wait(1);
 
         productListPage.controlSecondPage();
 
-        Thread.sleep(5000);
+        productListPage.wait(5);
 
         productListPage.selectRandomProduct();
 
-        Thread.sleep(5000);
+        productListPage.wait(5);
 
         productDetailPage.addToBasket();
 
-        Thread.sleep(3000);
+        productDetailPage.wait(3);
         productDetailPage.gotoBasketPage();
 
-        Thread.sleep(3000);
+        productDetailPage.wait(3);
 
         basketPage.compareProductPrice();
-        Thread.sleep(3000);
+        basketPage.wait(3);
 
         basketPage.increaseProductAmount("2");
 
-        Thread.sleep(3000);
+        basketPage.wait(3);
 
         basketPage.controlProductAmount("2");
 
-        Thread.sleep(3000);
+        basketPage.wait(3);
 
         basketPage.deleteBasket();
-        Thread.sleep(3000);
+        basketPage.wait(3);
 
         basketPage.controlIsBasketPageEmpty();
-        Thread.sleep(3000);
+        basketPage.wait(3);
 
     }
 
-
 }
+

@@ -55,7 +55,7 @@ public class BasePage {
         try {
             Thread.sleep(seconds*1000);
             logger.info(seconds +" saniye süre beklendi.");
-        }catch (Exception e){
+        }catch (InterruptedException e){
             logger.error(seconds +" saniye süre beklenmedi.");
         }
     }

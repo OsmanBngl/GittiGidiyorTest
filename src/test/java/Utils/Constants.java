@@ -2,9 +2,9 @@ package Utils;
 
 public class Constants {
 
-    public static final String email = "************";
-    public static final String password = "**************";
-    public static final String expectedUsername="*************";
+    public static final String email = "gittigidiyordeneme34@gmail.com";
+    public static final String password = "34Gittigidiyor34";
+    public static final String expectedUsername="denemedeneme947400";
 
     public static final String expectedSearchText="Bilgisayar";
 
